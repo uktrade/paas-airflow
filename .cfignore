@@ -1,0 +1,6 @@
+airflow/logs
+.cache
+.git
+.idea
+.mypy_cache
+.pytest_cache

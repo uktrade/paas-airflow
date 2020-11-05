@@ -1,0 +1,6 @@
+---
+applications:
+- name: paas-airflow-dev
+  buildpacks:
+   - https://github.com/cloudfoundry/python-buildpack.git#v1.7.15
+  memory: 1gb
