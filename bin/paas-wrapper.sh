@@ -17,7 +17,7 @@ export DEBUG=False
 
 #export AIRFLOW__API__AUTH_BACKEND=dataflow.api_auth_backend
 
-#export AIRFLOW__CORE__DAGS_FOLDER=/home/vcap/app/dataflow/dags
+export AIRFLOW__CORE__DAGS_FOLDER=/home/vcap/app/dags
 export AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
 export AIRFLOW__CORE__LOAD_EXAMPLES=False
 
@@ -36,8 +36,8 @@ export AIRFLOW__CORE__REMOTE_BASE_LOG_FOLDER="s3://"$(echo $VCAP_SERVICES | jq -
 
 export AIRFLOW__CORE__SQL_ALCHEMY_CONN=$(echo $VCAP_SERVICES | jq -r '.postgres[0].credentials.uri')
 
-#export AIRFLOW__CORE__EXECUTOR=CeleryExecutor
-export AIRFLOW__CORE__EXECUTOR=LocalExecutor
+export AIRFLOW__CORE__EXECUTOR=CeleryExecutor
+#export AIRFLOW__CORE__EXECUTOR=LocalExecutor
 export AIRFLOW__CELERY__BROKER_URL=$(echo $VCAP_SERVICES | jq -r '.redis[0].credentials.uri')
 export AIRFLOW__CELERY__RESULT_BACKEND="db+${AIRFLOW__CORE__SQL_ALCHEMY_CONN}"
 export AIRFLOW__CELERY__FLOWER_PORT=8080
@@ -45,8 +45,8 @@ export AIRFLOW__CELERY__FLOWER_PORT=8080
 export AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL=86400
 export AIRFLOW__SCHEDULER__PRINT_STATS_INTERVAL=86400
 
-export AIRFLOW__WEBSERVER__AUTHENTICATE=False
-#export AIRFLOW__WEBSERVER__AUTH_BACKEND=dataflow.airflow_login
+export AIRFLOW__WEBSERVER__AUTHENTICATE=True
+export AIRFLOW__WEBSERVER__AUTH_BACKEND=auth.airflow_login
 export AIRFLOW__WEBSERVER__COOKIE_SECURE=True
 export AIRFLOW__WEBSERVER__COOKIE_SAMESITE=Lax
 

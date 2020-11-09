@@ -1,14 +1,12 @@
 # If changing requirements, both requirements.txt and
 # requirements-tensorflow.txt must be recompiled
-#apache-airflow[postgres,crypto,celery,s3,sentry,slack]
+apache-airflow[postgres,crypto,celery,s3,sentry,slack]
 #backoff
 #mohawk
 #msal
 #pyjwt[crypto]
-#redis
-#requests
-#requests-oauthlib
+redis
+requests
+requests-oauthlib
 #typing_extensions
-#git+https://github.com/GSS-Cogs/gss-utils.git@6439568a04c177a117cf8038dbee1678c98df419
 #zipstream
-#git+https://github.com/uktrade/data-flow-metrics.git
