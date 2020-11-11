@@ -31,7 +31,7 @@ colorama==0.4.3           # via flask-appbuilder
 colorlog==4.0.2           # via apache-airflow
 configparser==3.5.3       # via apache-airflow
 croniter==0.3.34          # via apache-airflow
-cryptography==3.1         # via apache-airflow, pyjwt
+cryptography==3.2         # via apache-airflow, pyjwt
 databaker==2.0.0          # via gssutils
 decorator==4.4.2          # via ipython
 defusedxml==0.6.0         # via python3-openid

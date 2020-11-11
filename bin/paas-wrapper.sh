@@ -15,7 +15,7 @@ export PYTHONPATH=/app:${PYTHONPATH}
 export AIRFLOW_HOME=/home/vcap/app/airflow
 export DEBUG=False
 
-export AIRFLOW__CORE__DAGS_FOLDER=/home/vcap/app/${DAGS_REPO_NAME}/dags
+export AIRFLOW__CORE__DAGS_FOLDER=/home/vcap/app/${DAGS_REPO_NAME}/pipelines
 export AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
 export AIRFLOW__CORE__LOAD_EXAMPLES=False
 
