@@ -1,12 +1,6 @@
 # If changing requirements, both requirements.txt and
 # requirements-tensorflow.txt must be recompiled
 apache-airflow[postgres,crypto,celery,s3,sentry,slack]
-#backoff
-#mohawk
-#msal
-#pyjwt[crypto]
 redis
 requests
 requests-oauthlib
-#typing_extensions
-#zipstream

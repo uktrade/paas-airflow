@@ -32,7 +32,6 @@ colorlog==4.0.2           # via apache-airflow
 configparser==3.5.3       # via apache-airflow
 croniter==0.3.34          # via apache-airflow
 cryptography==3.1         # via apache-airflow, pyjwt
-#git+https://github.com/uktrade/data-flow-metrics.git  # via -r requirements.in
 databaker==2.0.0          # via gssutils
 decorator==4.4.2          # via ipython
 defusedxml==0.6.0         # via python3-openid
@@ -56,7 +55,6 @@ flower==0.9.5             # via apache-airflow
 funcsigs==1.0.2           # via apache-airflow
 future==0.18.2            # via apache-airflow, notifications-python-client
 graphviz==0.14.1          # via apache-airflow
-#git+https://github.com/GSS-Cogs/gss-utils.git@6439568a04c177a117cf8038dbee1678c98df419  # via -r requirements.in
 gunicorn==20.0.4          # via apache-airflow
 html2text==2020.1.16      # via gssutils
 html5lib==1.1             # via messytables
@@ -86,9 +84,7 @@ marshmallow-enum==1.5.1   # via flask-appbuilder
 marshmallow-sqlalchemy==0.23.1  # via flask-appbuilder
 marshmallow==2.21.0       # via flask-appbuilder, marshmallow-enum, marshmallow-sqlalchemy
 messytables==0.15.1       # via gssutils, xypath
-#mohawk==1.1.0             # via -r requirements.in
 monotonic==1.5            # via notifications-python-client
-#msal==1.5.0               # via -r requirements.in
 msgpack==1.0.0            # via cachecontrol
 natsort==7.0.1            # via croniter
 notifications-python-client==5.7.0  # via -r requirements.in
@@ -148,7 +144,6 @@ texttable==1.6.3          # via pyexcel
 thrift==0.13.0            # via apache-airflow
 tornado==5.1.1            # via apache-airflow, flower
 traitlets==5.0.4          # via ipython
-#typing-extensions==3.7.4.3  # via -r requirements.in
 tzlocal==1.5.1            # via apache-airflow, pendulum
 unicodecsv==0.14.1        # via apache-airflow
 unidecode==1.1.1          # via gssutils
@@ -164,7 +159,6 @@ xlrd==1.2.0               # via messytables, pyexcel-xls, xlutils
 xlutils==2.0.0            # via databaker
 xlwt==1.3.0               # via pyexcel-xls, xlutils
 xypath==1.1.1             # via databaker, gssutils
-#zipstream==1.1.4          # via -r requirements.in
 zope.deprecation==4.4.0   # via apache-airflow
 
 # The following packages are considered to be unsafe in a requirements file:
