@@ -9,10 +9,10 @@ deploying
 
 pre-reqs
   - please ensure the vars (see sample.env) are set before deploying
-  - The following backing services are required
-      - postgres db
-      - redis
-      - S3 bucket
+  - The following backing services are required, and must be bound with specific `binding-name`s, to avoid collisions with other services
+      - postgres db: `cf bind-service app-instance-name pg-instance-name --binding-name airflow-default-db`
+      - redis: `cf bind-service app-instance-name redis-instance-name --binding-name airflow-default-redis`
+      - S3 bucket: `cf bind-service app-instance-name s3-instance-name --binding-name airflow-default-s3`
   - For the initial push you will need to initiate the DB, so the procfile should be updated to included
       - /home/vcap/app/bin/paas-wrapper.sh airflow initdb
       once done, remove this entry and put the procfile back to how it was.
