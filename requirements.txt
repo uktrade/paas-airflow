@@ -4,162 +4,335 @@
 #
 #    pip-compile requirements.in
 #
-alembic==1.3.1            # via -r requirements.in, apache-airflow
-amqp==2.6.1               # via kombu
-apache-airflow[celery,crypto,postgres,s3,sentry,slack]==1.10.12  # via -r requirements.in, data-flow-metrics
-apispec[yaml]==1.3.3      # via flask-appbuilder
-appnope==0.1.0            # via ipython
-argcomplete==1.12.0       # via apache-airflow
-argparse==1.4.0           # via gssutils
-attrs==19.3.0             # via apache-airflow, cattrs, jsonschema
-babel==2.8.0              # via flask-babel
-backcall==0.2.0           # via ipython
-#backoff==1.10.0           # via -r requirements.in
-billiard==3.6.3.0         # via celery
-blinker==1.4              # via apache-airflow
-boto3==1.14.58            # via apache-airflow
-botocore==1.17.58         # via boto3, s3transfer
-cachecontrol==0.12.6      # via gssutils
-cached-property==1.5.1    # via apache-airflow
-cattrs==1.0.0             # via apache-airflow
-celery==4.4.7             # via apache-airflow, flower
-certifi==2020.6.20        # via requests, sentry-sdk
-cffi==1.14.2              # via cryptography
-chardet==3.0.4            # via messytables, requests
-click==7.1.2              # via flask, flask-appbuilder
-colorama==0.4.3           # via flask-appbuilder
-colorlog==4.0.2           # via apache-airflow
-configparser==3.5.3       # via apache-airflow
-croniter==0.3.34          # via apache-airflow
-cryptography==3.2         # via apache-airflow, pyjwt
-databaker==2.0.0          # via gssutils
-decorator==4.4.2          # via ipython
-defusedxml==0.6.0         # via python3-openid
-dill==0.3.2               # via apache-airflow
-dnspython==2.0.0          # via email-validator
-docopt==0.6.2             # via databaker, notifications-python-client
-docutils==0.15.2          # via botocore, python-daemon
-email-validator==1.1.1    # via apache-airflow, flask-appbuilder
-flask-admin==1.5.4        # via apache-airflow
-flask-appbuilder==2.3.4   # via apache-airflow
-flask-babel==1.0.0        # via flask-appbuilder
-flask-caching==1.3.3      # via apache-airflow
-flask-jwt-extended==3.24.1  # via flask-appbuilder
-flask-login==0.4.1        # via apache-airflow, flask-appbuilder
-flask-openid==1.2.5       # via flask-appbuilder
-flask-sqlalchemy==2.4.4   # via flask-appbuilder
-flask-swagger==0.2.14     # via apache-airflow
-flask-wtf==0.14.3         # via apache-airflow, flask-appbuilder
-flask==1.1.2              # via apache-airflow, flask-admin, flask-appbuilder, flask-babel, flask-caching, flask-jwt-extended, flask-login, flask-openid, flask-sqlalchemy, flask-swagger, flask-wtf
-flower==0.9.5             # via apache-airflow
-funcsigs==1.0.2           # via apache-airflow
-future==0.18.2            # via apache-airflow, notifications-python-client
-graphviz==0.14.1          # via apache-airflow
-gunicorn==20.0.4          # via apache-airflow
-html2text==2020.1.16      # via gssutils
-html5lib==1.1             # via messytables
-humanize==2.6.0           # via flower
-idna==2.10                # via email-validator, requests
-ipython-genutils==0.2.0   # via traitlets
-ipython==7.18.1           # via gssutils
-iso8601==0.1.12           # via apache-airflow
-isodate==0.6.0            # via rdflib
-itsdangerous==1.1.0       # via flask, flask-wtf
-jedi==0.17.2              # via ipython
-jinja2==2.11.2            # via apache-airflow, flask, flask-babel, python-nvd3
-jmespath==0.10.0          # via boto3, botocore
-joblib==0.16.0            # via scikit-learn
-json-merge-patch==0.2     # via apache-airflow
-json-table-schema==0.2.1  # via messytables
-jsonschema==3.2.0         # via apache-airflow, flask-appbuilder
-kombu==4.6.11             # via celery
-lazy-object-proxy==1.5.1  # via apache-airflow
-lml==0.0.9                # via pyexcel, pyexcel-io
-lockfile==0.12.2          # via gssutils, python-daemon
-lxml==4.5.2               # via gssutils, messytables, pyexcel-ezodf, pyexcel-ods3
-mako==1.1.3               # via alembic
-markdown==2.6.11          # via apache-airflow
-markupsafe==1.1.1         # via jinja2, mako, wtforms
-marshmallow-enum==1.5.1   # via flask-appbuilder
-marshmallow-sqlalchemy==0.23.1  # via flask-appbuilder
-marshmallow==2.21.0       # via flask-appbuilder, marshmallow-enum, marshmallow-sqlalchemy
-messytables==0.15.1       # via gssutils, xypath
-monotonic==1.5            # via notifications-python-client
-msgpack==1.0.0            # via cachecontrol
-natsort==7.0.1            # via croniter
-notifications-python-client==5.7.0  # via -r requirements.in
-numpy==1.18.5             # via pandas, scikit-learn, scipy
-oauthlib==3.1.0           # via requests-oauthlib
-pandas==0.25.3            # via apache-airflow, gssutils
-parso==0.7.1              # via jedi
-pendulum==1.4.4           # via apache-airflow
-pexpect==4.8.0            # via ipython
-pickleshare==0.7.5        # via ipython
-prison==0.1.3             # via flask-appbuilder
-prometheus-client==0.8.0  # via data-flow-metrics, flower
-prompt-toolkit==3.0.7     # via ipython
-psutil==5.7.2             # via apache-airflow
-psycopg2-binary==2.8.6    # via apache-airflow
-ptyprocess==0.6.0         # via pexpect
-pycparser==2.20           # via cffi
-pyexcel-ezodf==0.3.4      # via pyexcel-ods3
-pyexcel-io==0.5.20        # via gssutils, pyexcel, pyexcel-ods3, pyexcel-xls
-pyexcel-ods3==0.5.3       # via gssutils
-pyexcel-xls==0.5.9        # via gssutils
-pyexcel==0.6.4            # via gssutils
-pygments==2.6.1           # via apache-airflow, ipython
-pyhamcrest==2.0.2         # via databaker
-pyjwt[crypto]==1.7.1      # via -r requirements.in, flask-appbuilder, flask-jwt-extended, msal, notifications-python-client
-pyparsing==2.4.7          # via rdflib
-pyrsistent==0.16.0        # via jsonschema
-python-daemon==2.2.4      # via apache-airflow
-python-dateutil==2.8.1    # via alembic, apache-airflow, botocore, croniter, flask-appbuilder, gssutils, messytables, pandas, pendulum
-python-editor==1.0.4      # via alembic
-python-magic==0.4.18      # via messytables
-python-nvd3==0.15.0       # via apache-airflow
-python-slugify==4.0.1     # via apache-airflow, python-nvd3
-python3-openid==3.2.0     # via flask-openid
-pytz==2020.1              # via babel, celery, flask-babel, flower, pandas, tzlocal
-pytzdata==2020.1          # via pendulum
-pyyaml==5.3.1             # via apispec, flask-swagger
-rdflib-jsonld==0.5.0      # via gssutils
-rdflib==4.2.2             # via gssutils, rdflib-jsonld
-redis==3.5.3              # via -r requirements.in
-requests-oauthlib==1.3.0  # via -r requirements.in
-requests==2.24.0          # via -r requirements.in, apache-airflow, cachecontrol, gssutils, messytables, msal, notifications-python-client, requests-oauthlib, slackclient
-s3transfer==0.3.3         # via boto3
-scikit-learn==0.22.2.post1  # via -r requirements.in
-scipy==1.4.1              # via scikit-learn
-sentry-sdk==0.17.4        # via apache-airflow
-setproctitle==1.1.10      # via apache-airflow
-six==1.15.0               # via cryptography, flask-jwt-extended, html5lib, isodate, jsonschema, mohawk, prison, pyrsistent, python-dateutil, slackclient, sqlalchemy-utils, tenacity, thrift, websocket-client
-slackclient==1.3.2        # via apache-airflow
-sqlalchemy-jsonfield==0.9.0  # via apache-airflow
-sqlalchemy-utils==0.36.8  # via flask-appbuilder
-sqlalchemy==1.3.19        # via alembic, apache-airflow, flask-sqlalchemy, marshmallow-sqlalchemy, sqlalchemy-jsonfield, sqlalchemy-utils
-tabulate==0.8.7           # via apache-airflow
-tenacity==4.12.0          # via apache-airflow
-text-unidecode==1.3       # via python-slugify
-texttable==1.6.3          # via pyexcel
-thrift==0.13.0            # via apache-airflow
-tornado==5.1.1            # via apache-airflow, flower
-traitlets==5.0.4          # via ipython
-tzlocal==1.5.1            # via apache-airflow, pendulum
-unicodecsv==0.14.1        # via apache-airflow
-unidecode==1.1.1          # via gssutils
-urllib3==1.25.10          # via botocore, requests, sentry-sdk
-vine==1.3.0               # via amqp, celery
-wcwidth==0.2.5            # via prompt-toolkit
-webencodings==0.5.1       # via html5lib
-websocket-client==0.54.0  # via slackclient
-werkzeug==0.16.1          # via apache-airflow, flask, flask-caching, flask-jwt-extended
-wheel==0.35.1             # via gssutils
-wtforms==2.3.3            # via flask-admin, flask-wtf
-xlrd==1.2.0               # via messytables, pyexcel-xls, xlutils
-xlutils==2.0.0            # via databaker
-xlwt==1.3.0               # via pyexcel-xls, xlutils
-xypath==1.1.1             # via databaker, gssutils
-zope.deprecation==4.4.0   # via apache-airflow
+alembic==1.3.1
+    # via apache-airflow
+amqp==2.6.1
+    # via kombu
+apache-airflow[celery,crypto,postgres,s3,sentry,slack]==1.10.12
+    # via -r requirements.in
+apispec[yaml]==1.3.3
+    # via flask-appbuilder
+argcomplete==1.12.0
+    # via apache-airflow
+attrs==19.3.0
+    # via
+    #   apache-airflow
+    #   cattrs
+    #   jsonschema
+babel==2.8.0
+    # via flask-babel
+billiard==3.6.3.0
+    # via celery
+blinker==1.4
+    # via apache-airflow
+boto3==1.14.58
+    # via apache-airflow
+botocore==1.17.58
+    # via
+    #   boto3
+    #   s3transfer
+cached-property==1.5.1
+    # via apache-airflow
+cattrs==1.0.0
+    # via apache-airflow
+celery==4.4.7
+    # via
+    #   apache-airflow
+    #   flower
+certifi==2020.6.20
+    # via
+    #   requests
+    #   sentry-sdk
+cffi==1.14.2
+    # via cryptography
+chardet==3.0.4
+    # via requests
+click==7.1.2
+    # via
+    #   flask
+    #   flask-appbuilder
+colorama==0.4.3
+    # via flask-appbuilder
+colorlog==4.0.2
+    # via apache-airflow
+configparser==3.5.3
+    # via apache-airflow
+croniter==0.3.34
+    # via apache-airflow
+cryptography==3.4.6
+    # via
+    #   -r requirements.in
+    #   apache-airflow
+defusedxml==0.6.0
+    # via python3-openid
+dill==0.3.2
+    # via apache-airflow
+dnspython==2.0.0
+    # via email-validator
+docutils==0.15.2
+    # via
+    #   botocore
+    #   python-daemon
+email-validator==1.1.1
+    # via
+    #   apache-airflow
+    #   flask-appbuilder
+flask-admin==1.5.4
+    # via apache-airflow
+flask-appbuilder==2.3.4
+    # via apache-airflow
+flask-babel==1.0.0
+    # via flask-appbuilder
+flask-caching==1.3.3
+    # via apache-airflow
+flask-jwt-extended==3.24.1
+    # via flask-appbuilder
+flask-login==0.4.1
+    # via
+    #   apache-airflow
+    #   flask-appbuilder
+flask-openid==1.2.5
+    # via flask-appbuilder
+flask-sqlalchemy==2.4.4
+    # via flask-appbuilder
+flask-swagger==0.2.14
+    # via apache-airflow
+flask-wtf==0.14.3
+    # via
+    #   apache-airflow
+    #   flask-appbuilder
+flask==1.1.2
+    # via
+    #   apache-airflow
+    #   flask-admin
+    #   flask-appbuilder
+    #   flask-babel
+    #   flask-caching
+    #   flask-jwt-extended
+    #   flask-login
+    #   flask-openid
+    #   flask-sqlalchemy
+    #   flask-swagger
+    #   flask-wtf
+flower==0.9.5
+    # via apache-airflow
+funcsigs==1.0.2
+    # via apache-airflow
+future==0.18.2
+    # via apache-airflow
+graphviz==0.14.1
+    # via apache-airflow
+gunicorn==20.0.4
+    # via apache-airflow
+humanize==2.6.0
+    # via flower
+idna==2.10
+    # via
+    #   email-validator
+    #   requests
+importlib-metadata==1.7.0
+    # via
+    #   argcomplete
+    #   jsonschema
+    #   kombu
+iso8601==0.1.12
+    # via apache-airflow
+itsdangerous==1.1.0
+    # via
+    #   flask
+    #   flask-wtf
+jinja2==2.11.2
+    # via
+    #   apache-airflow
+    #   flask
+    #   flask-babel
+    #   python-nvd3
+jmespath==0.10.0
+    # via
+    #   boto3
+    #   botocore
+json-merge-patch==0.2
+    # via apache-airflow
+jsonschema==3.2.0
+    # via
+    #   apache-airflow
+    #   flask-appbuilder
+kombu==4.6.11
+    # via celery
+lazy-object-proxy==1.5.1
+    # via apache-airflow
+lockfile==0.12.2
+    # via python-daemon
+lxml==4.6.2
+    # via -r requirements.in
+mako==1.1.3
+    # via alembic
+markdown==2.6.11
+    # via apache-airflow
+markupsafe==1.1.1
+    # via
+    #   jinja2
+    #   mako
+    #   wtforms
+marshmallow-enum==1.5.1
+    # via flask-appbuilder
+marshmallow-sqlalchemy==0.23.1
+    # via flask-appbuilder
+marshmallow==2.21.0
+    # via
+    #   flask-appbuilder
+    #   marshmallow-enum
+    #   marshmallow-sqlalchemy
+natsort==7.0.1
+    # via croniter
+numpy==1.18.5
+    # via pandas
+oauthlib==3.1.0
+    # via requests-oauthlib
+pandas==0.25.3
+    # via apache-airflow
+pendulum==1.4.4
+    # via apache-airflow
+prison==0.1.3
+    # via flask-appbuilder
+prometheus-client==0.8.0
+    # via flower
+psutil==5.7.2
+    # via apache-airflow
+psycopg2-binary==2.8.6
+    # via apache-airflow
+pycparser==2.20
+    # via cffi
+pygments==2.6.1
+    # via apache-airflow
+pyjwt==1.7.1
+    # via
+    #   flask-appbuilder
+    #   flask-jwt-extended
+pyrsistent==0.16.0
+    # via jsonschema
+python-daemon==2.2.4
+    # via apache-airflow
+python-dateutil==2.8.1
+    # via
+    #   alembic
+    #   apache-airflow
+    #   botocore
+    #   croniter
+    #   flask-appbuilder
+    #   pandas
+    #   pendulum
+python-editor==1.0.4
+    # via alembic
+python-nvd3==0.15.0
+    # via apache-airflow
+python-slugify==4.0.1
+    # via
+    #   apache-airflow
+    #   python-nvd3
+python3-openid==3.2.0
+    # via flask-openid
+pytz==2020.1
+    # via
+    #   babel
+    #   celery
+    #   flask-babel
+    #   flower
+    #   pandas
+    #   tzlocal
+pytzdata==2020.1
+    # via pendulum
+pyyaml==5.3.1
+    # via
+    #   apispec
+    #   flask-swagger
+redis==3.5.3
+    # via -r requirements.in
+requests-oauthlib==1.3.0
+    # via -r requirements.in
+requests==2.24.0
+    # via
+    #   -r requirements.in
+    #   apache-airflow
+    #   requests-oauthlib
+    #   slackclient
+s3transfer==0.3.3
+    # via boto3
+sentry-sdk==0.17.4
+    # via apache-airflow
+setproctitle==1.1.10
+    # via apache-airflow
+six==1.15.0
+    # via
+    #   flask-jwt-extended
+    #   jsonschema
+    #   prison
+    #   pyrsistent
+    #   python-dateutil
+    #   slackclient
+    #   sqlalchemy-utils
+    #   tenacity
+    #   thrift
+    #   websocket-client
+slackclient==1.3.2
+    # via apache-airflow
+sqlalchemy-jsonfield==0.9.0
+    # via apache-airflow
+sqlalchemy-utils==0.36.8
+    # via flask-appbuilder
+sqlalchemy==1.3.19
+    # via
+    #   alembic
+    #   apache-airflow
+    #   flask-sqlalchemy
+    #   marshmallow-sqlalchemy
+    #   sqlalchemy-jsonfield
+    #   sqlalchemy-utils
+tabulate==0.8.7
+    # via apache-airflow
+tenacity==4.12.0
+    # via apache-airflow
+text-unidecode==1.3
+    # via python-slugify
+thrift==0.13.0
+    # via apache-airflow
+tornado==5.1.1
+    # via
+    #   apache-airflow
+    #   flower
+typing-extensions==3.7.4.3
+    # via apache-airflow
+tzlocal==1.5.1
+    # via
+    #   apache-airflow
+    #   pendulum
+unicodecsv==0.14.1
+    # via apache-airflow
+urllib3==1.25.10
+    # via
+    #   botocore
+    #   requests
+    #   sentry-sdk
+vine==1.3.0
+    # via
+    #   amqp
+    #   celery
+websocket-client==0.54.0
+    # via slackclient
+werkzeug==0.16.1
+    # via
+    #   apache-airflow
+    #   flask
+    #   flask-caching
+    #   flask-jwt-extended
+wtforms==2.3.3
+    # via
+    #   flask-admin
+    #   flask-wtf
+zipp==3.4.1
+    # via importlib-metadata
+zope.deprecation==4.4.0
+    # via apache-airflow
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

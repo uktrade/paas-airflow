@@ -4,3 +4,5 @@ apache-airflow[postgres,crypto,celery,s3,sentry,slack]
 redis
 requests
 requests-oauthlib
+cryptography>=3.3.2
+lxml>=4.6.2
