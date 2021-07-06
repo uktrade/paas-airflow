@@ -1,8 +1,9 @@
 # If changing requirements, both requirements.txt and
 # requirements-tensorflow.txt must be recompiled
-apache-airflow[postgres,crypto,celery,s3,sentry,slack]
+apache-airflow[postgres,crypto,celery,sentry,slack]==1.10.12
 redis
 requests
 requests-oauthlib
+s3fs
 cryptography>=3.3.2
 lxml>=4.6.2
