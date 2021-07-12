@@ -3,7 +3,8 @@
 apache-airflow[postgres,crypto,celery,sentry,slack]==1.10.12
 redis
 requests
+s3fs<0.6.0
+cx_Oracle<9.0.0
 requests-oauthlib
-s3fs
 cryptography>=3.3.2
 lxml>=4.6.2
