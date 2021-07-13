@@ -13,8 +13,8 @@ pre-reqs
       - postgres db: `cf bind-service app-instance-name pg-instance-name --binding-name airflow-default-db`
       - redis: `cf bind-service app-instance-name redis-instance-name --binding-name airflow-default-redis`
       - S3 bucket: `cf bind-service app-instance-name s3-instance-name --binding-name airflow-default-s3`
-  - For the initial push you will need to initiate the DB, so the procfile should be updated to included
-      - /home/vcap/app/bin/paas-wrapper.sh airflow initdb
+  - For the initial push you will need to initiate the DB, so the procfile should be updated to included (or v3-ssh into service and run the command)
+      - /home/vcap/app/bin/paas-wrapper.sh airflow db init
       once done, remove this entry and put the procfile back to how it was.
 
 This can be pushed to paas using the standard CF cli commands eg.

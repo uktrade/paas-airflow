@@ -23,3 +23,9 @@ DEFAULT_DATABASE_GRANTEES = (
     if os.environ.get("DEFAULT_DATABASE_GRANTEES") is not None
     else []
 )
+
+AIRFLOW_API_HAWK_CREDENTIALS = {
+    os.environ.get('DATA_STORE_UPLOADER_SENDER_HAWK_ID'): os.environ.get(
+        'DATA_STORE_UPLOADER_SENDER_HAWK_KEY'
+    ),
+}
