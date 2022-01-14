@@ -8,3 +8,5 @@ mohawk
 authlib
 faker
 requests-oauthlib
+#celery>=5.2.2
+Flask-AppBuilder>=3.3.4
