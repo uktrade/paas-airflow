@@ -4,11 +4,9 @@
 #
 #    pip-compile requirements.in
 #
-alembic==1.3.1
-    # via
-    #   -r requirements.in
-    #   apache-airflow
-amqp==2.6.1
+alembic==1.7.5
+    # via apache-airflow
+amqp==5.0.9
     # via kombu
 anyio==3.2.1
     # via httpcore
@@ -21,8 +19,10 @@ apache-airflow[amazon,celery,crypto,flask_oauth,postgres,sentry,slack]==2.1.1
     #   apache-airflow-providers-slack
 apache-airflow-providers-amazon==2.0.0
     # via apache-airflow
-apache-airflow-providers-celery==2.0.0
-    # via apache-airflow
+apache-airflow-providers-celery==2.1.0
+    # via
+    #   -r requirements.in
+    #   apache-airflow
 apache-airflow-providers-ftp==2.0.0
     # via apache-airflow
 apache-airflow-providers-imap==2.0.0
@@ -60,7 +60,7 @@ botocore==1.20.110
     #   s3transfer
 cattrs==1.5.0
     # via apache-airflow
-celery==4.4.7
+celery==5.2.3
     # via
     #   apache-airflow-providers-celery
     #   flower
@@ -71,13 +71,23 @@ certifi==2021.5.30
     #   sentry-sdk
 cffi==1.14.6
     # via cryptography
-chardet==4.0.0
+charset-normalizer==2.0.10
     # via requests
-click==7.1.2
+click==8.0.3
     # via
+    #   celery
+    #   click-didyoumean
+    #   click-plugins
+    #   click-repl
     #   clickclick
     #   flask
     #   flask-appbuilder
+click-didyoumean==0.3.0
+    # via celery
+click-plugins==1.1.1
+    # via celery
+click-repl==0.2.0
+    # via celery
 clickclick==20.10.2
     # via apache-airflow
 colorama==0.4.4
@@ -108,8 +118,9 @@ email-validator==1.1.3
     # via flask-appbuilder
 faker==8.10.1
     # via -r requirements.in
-flask==1.1.4
+flask==1.1.2
     # via
+    #   -r requirements.in
     #   apache-airflow
     #   flask-appbuilder
     #   flask-babel
@@ -120,9 +131,7 @@ flask==1.1.4
     #   flask-sqlalchemy
     #   flask-wtf
 flask-appbuilder==3.4.3
-    # via
-    #   -r requirements.in
-    #   apache-airflow
+    # via apache-airflow
 flask-babel==1.0.0
     # via flask-appbuilder
 flask-caching==1.10.1
@@ -141,7 +150,7 @@ flask-wtf==0.14.3
     # via
     #   apache-airflow
     #   flask-appbuilder
-flower==0.9.7
+flower==1.0.0
     # via apache-airflow-providers-celery
 graphviz==0.16
     # via apache-airflow
@@ -191,7 +200,7 @@ jsonschema==3.2.0
     #   flask-appbuilder
     #   openapi-schema-validator
     #   openapi-spec-validator
-kombu==4.6.11
+kombu==5.2.3
     # via celery
 lazy-object-proxy==1.6.0
     # via apache-airflow
@@ -223,7 +232,7 @@ marshmallow-sqlalchemy==0.23.1
     # via flask-appbuilder
 mohawk==1.1.0
     # via -r requirements.in
-numpy==1.21.0
+numpy==1.22.0
     # via
     #   apache-airflow
     #   pandas
@@ -233,7 +242,7 @@ openapi-schema-validator==0.1.5
     # via openapi-spec-validator
 openapi-spec-validator==0.3.1
     # via apache-airflow
-pandas==1.3.0
+pandas==1.3.5
     # via apache-airflow
 pendulum==2.1.2
     # via apache-airflow
@@ -241,6 +250,8 @@ prison==0.2.1
     # via flask-appbuilder
 prometheus-client==0.8.0
     # via flower
+prompt-toolkit==3.0.24
+    # via click-repl
 psutil==5.8.0
     # via apache-airflow
 psycopg2-binary==2.9.1
@@ -262,7 +273,6 @@ python-daemon==2.3.0
     # via apache-airflow
 python-dateutil==2.8.1
     # via
-    #   alembic
     #   apache-airflow
     #   botocore
     #   croniter
@@ -270,8 +280,6 @@ python-dateutil==2.8.1
     #   flask-appbuilder
     #   pandas
     #   pendulum
-python-editor==1.0.4
-    # via alembic
 python-nvd3==0.15.0
     # via apache-airflow
 python-slugify==4.0.1
@@ -282,7 +290,7 @@ python3-openid==3.2.0
     # via
     #   apache-airflow
     #   flask-openid
-pytz==2021.1
+pytz==2021.3
     # via
     #   babel
     #   celery
@@ -299,7 +307,7 @@ pyyaml==5.4.1
     #   openapi-spec-validator
 redis==3.5.3
     # via -r requirements.in
-requests==2.25.1
+requests==2.27.1
     # via
     #   -r requirements.in
     #   requests-oauthlib
@@ -317,6 +325,7 @@ setproctitle==1.2.2
     # via apache-airflow
 six==1.16.0
     # via
+    #   click-repl
     #   flask-jwt-extended
     #   isodate
     #   jsonschema
@@ -368,14 +377,15 @@ urllib3==1.26.6
     #   botocore
     #   requests
     #   sentry-sdk
-vine==1.3.0
+vine==5.0.0
     # via
     #   amqp
-    #   apache-airflow-providers-celery
     #   celery
-    #   flower
+    #   kombu
 watchtower==1.0.6
     # via apache-airflow-providers-amazon
+wcwidth==0.2.5
+    # via prompt-toolkit
 werkzeug==1.0.1
     # via
     #   apache-airflow
