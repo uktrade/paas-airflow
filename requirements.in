@@ -1,6 +1,6 @@
 # If changing requirements, both requirements.txt and
 # requirements-tensorflow.txt must be recompiled
-apache-airflow[postgres,crypto,celery,sentry,slack,flask_oauth,amazon]==2.1.1
+apache-airflow[postgres,crypto,celery,sentry,slack,flask_oauth,amazon]==2.2.2
 redis
 requests
 mohawk
@@ -9,3 +9,4 @@ faker
 requests-oauthlib
 apache-airflow-providers-celery==2.1.0
 flask==1.1.2
+flask-openid==1.3.0
