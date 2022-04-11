@@ -10,7 +10,7 @@ amqp==5.0.9
     # via kombu
 anyio==3.2.1
     # via httpcore
-apache-airflow[amazon,celery,crypto,flask_oauth,postgres,sentry,slack]==2.2.2
+apache-airflow[amazon,celery,crypto,flask_oauth,postgres,sentry,slack]==2.2.4
     # via
     #   -r requirements.in
     #   apache-airflow-providers-amazon
