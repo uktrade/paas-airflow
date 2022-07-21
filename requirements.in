@@ -2,10 +2,10 @@
 # requirements-tensorflow.txt must be recompiled
 #apache-airflow[postgres,crypto,celery,sentry,slack,flask_oauth,amazon]==2.2.2
 apache-airflow[crypto,sentry,flask_oauth]==2.3.3
-apache-airflow-providers-celery==3.0.0
-apache-airflow-providers-amazon==4.1.0
-apache-airflow-providers-postgres==5.1.0
-apache-airflow-providers-slack==5.1.0
+apache-airflow-providers-celery>=3.0.0
+apache-airflow-providers-amazon>=4.1.0
+apache-airflow-providers-postgres>=5.1.0
+apache-airflow-providers-slack>=5.1.0
 redis
 requests
 mohawk
