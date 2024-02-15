@@ -182,7 +182,7 @@ flask-wtf==0.15.1
     # via
     #   apache-airflow
     #   flask-appbuilder
-flower==1.1.0
+flower==1.2.0
     # via
     #   -r requirements.in
     #   apache-airflow
