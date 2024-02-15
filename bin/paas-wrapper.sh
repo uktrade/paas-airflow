@@ -42,7 +42,7 @@ export AIRFLOW__LOGGING__REMOTE_BASE_LOG_FOLDER="s3://"$(echo $AIRFLOW_BUCKET_JS
 export AIRFLOW__CORE__SQL_ALCHEMY_CONN=$(echo $AIRFLOW_DB_JSON | jq -r '.credentials.uri' | sed s/postgres:/postgresql:/)
 
 export AIRFLOW__CORE__EXECUTOR=CeleryExecutor
-export AIRFLOW__CELERY__BROKER_URL=$(echo $AIRFLOW_REDIS_JSON | jq -r '.credentials.uri')
+export AIRFLOW__CELERY__BROKER_URL=$(echo $AIRFLOW_REDIS_JSON | jq -r '.credentials.uri')"/0"
 export AIRFLOW__CELERY__RESULT_BACKEND="db+${AIRFLOW__CORE__SQL_ALCHEMY_CONN}"
 
 export AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL=300
