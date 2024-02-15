@@ -1,8 +1,8 @@
 #!/bin/sh
 
-airflow upgradedb
+airflow db upgrade
 
-airflow pool -s default_pool ${AIRFLOW_DEFAULT_POOL_SLOTS:-16} "Main tasks"
-airflow pool -s sensors ${AIRFLOW_SENSORS_POOL_SLOTS:-16} "External task sensors"
+airflow pools set default_pool ${AIRFLOW_DEFAULT_POOL_SLOTS:-16} "main-tasks"
+airflow pools set sensors ${AIRFLOW_SENSORS_POOL_SLOTS:-16} "external-task-sensors"
 
 airflow scheduler
