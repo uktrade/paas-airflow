@@ -124,7 +124,7 @@ cron-descriptor==1.2.31
     # via apache-airflow
 croniter==1.0.15
     # via apache-airflow
-cryptography==3.4.7
+cryptography==42.0.0
     # via
     #   apache-airflow
     #   authlib
@@ -189,6 +189,8 @@ flower==1.1.0
     #   apache-airflow-providers-celery
 graphviz==0.16
     # via apache-airflow
+greenlet==3.0.3
+    # via sqlalchemy
 gunicorn==20.1.0
     # via apache-airflow
 h11==0.12.0
