@@ -321,7 +321,7 @@ psycopg2-binary==2.9.1
     # via apache-airflow-providers-postgres
 pycparser==2.20
     # via cffi
-pygments==2.9.0
+pygments==2.15.0
     # via
     #   apache-airflow
     #   rich
